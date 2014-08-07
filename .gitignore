@@ -1,17 +1,23 @@
-*.class
-*.log
+# exclude all
+/*
 
-# sbt specific
-.cache/
-.history/
-.lib/
-dist/*
-target/
-lib_managed/
-src_managed/
-project/boot/
-project/plugins/project/
+# include important folders
+# need gradle 
+!gradle/
+!gradlew
+!gradlew.bat
+!build.gradle
 
-# Scala-IDE specific
-.scala_dependencies
-.worksheet
+# include markdowns
+!README.md
+!License.md
+
+# include sourcecode
+!src/
+
+# include git important files
+!.gitmodules
+!.gitignore
+
+# include travis build
+!.travis.yml
