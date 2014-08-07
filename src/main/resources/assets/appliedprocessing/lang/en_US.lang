@@ -1,0 +1,5 @@
+item.appliedprocessing:SkyWoodDust.name=Sky Wood Dust
+tile.appliedprocessing:BlockSkyWood.name=Sky Wood
+tile.appliedprocessing:BlockSkyWoodPlanks.name=Sky Wood Planks
+tile.appliedprocessing:BlockSkyLeaves.name=Sky Leaves
+itemGroup.appliedprocessing=Applied Processing

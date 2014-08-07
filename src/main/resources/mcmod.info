@@ -1,0 +1,16 @@
+[
+{
+  "modid": "appliedprocessing",
+  "name": "Applied Processing",
+  "description": "Applied Processing for Applied Energistics",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["yueh"],
+  "credits": "Algo, Walri, The Forge and FML guys, for making this example",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
