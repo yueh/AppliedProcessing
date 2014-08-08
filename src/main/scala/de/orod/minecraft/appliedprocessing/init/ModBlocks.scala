@@ -29,11 +29,13 @@ object ModBlocks {
   val skywood = new BlockSkyWood
   val skyleaves = new BlockSkyLeaves
   val skyplank = new BlockSkyPlank
+  val skyfurnace = new BlockSkyFurnace
 
   def init() = {
-    GameRegistry registerBlock (skywood, "BlockSkyWood")
-    GameRegistry registerBlock (skyleaves, "BlockSkyLeaves")
-    GameRegistry registerBlock (skyplank, "BlockSkyWoodPlanks")
+    GameRegistry registerBlock (skywood, Names.BLOCK_SKY_WOOD)
+    GameRegistry registerBlock (skyleaves, Names.BLOCK_SKY_LEAVES)
+    GameRegistry registerBlock (skyplank, Names.BLOCK_SKY_PLANK)
+    GameRegistry registerBlock (skyfurnace, Names.BLOCK_SKY_FURNACE)
   }
 
 }

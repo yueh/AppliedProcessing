@@ -33,6 +33,14 @@ trait BottomTexture extends BaseBlock {
   def getBottomIcon(side: Int) = iconBottom
 
   @SideOnly(Side.CLIENT)
+  override def getIcon(side: Int, metadata: Int) = {
+    side match {
+      case 0 => getBottomIcon(side)
+      case _ => super.getIcon(side, metadata)
+    }
+  }
+
+  @SideOnly(Side.CLIENT)
   abstract override def registerBlockIcons(register: IIconRegister) = {
     super.registerBlockIcons(register)
     iconBottom = register registerIcon String.format("%sBottom", getUnwrappedUnlocalizedName(getUnlocalizedName))

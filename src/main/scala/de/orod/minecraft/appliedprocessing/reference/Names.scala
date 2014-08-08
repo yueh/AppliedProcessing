@@ -24,4 +24,5 @@ object Names {
   final val BLOCK_SKY_LEAVES = "BlockSkyLeaves"
   final val BLOCK_SKY_PLANK = "BlockSkyWoodPlanks"
   final val ITEM_SKY_WOODDUST = "SkyWoodDust"
+  final val BLOCK_SKY_FURNACE = "BlockSkyFurnace"
 }

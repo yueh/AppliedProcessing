@@ -41,6 +41,8 @@ trait BaseBlock extends Block {
 class APBaseBlock(val material: Material = Material.rock) extends Block(material) with BaseBlock {
   this setBlockTextureName getUnwrappedUnlocalizedName(getUnlocalizedName)
 
+  override def getIcon(side: Int, metadata: Int) = blockIcon
+
   @SideOnly(Side.CLIENT)
   override def registerBlockIcons(register: IIconRegister) = {
     blockIcon = register registerIcon String.format("%s", getUnwrappedUnlocalizedName(getUnlocalizedName))

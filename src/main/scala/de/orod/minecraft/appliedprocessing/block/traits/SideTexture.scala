@@ -31,6 +31,14 @@ trait SideTexture extends BaseBlock {
   def getSideIcon(side: Int) = iconSide
 
   @SideOnly(Side.CLIENT)
+  override def getIcon(side: Int, metadata: Int) = {
+    side match {
+      case 2 | 3 | 4 | 5 => getSideIcon(side)
+      case _ => super.getIcon(side, metadata)
+    }
+  }
+
+  @SideOnly(Side.CLIENT)
   abstract override def registerBlockIcons(register: IIconRegister) = {
     super.registerBlockIcons(register)
     iconSide = register registerIcon String.format("%s", getUnwrappedUnlocalizedName(getUnlocalizedName))

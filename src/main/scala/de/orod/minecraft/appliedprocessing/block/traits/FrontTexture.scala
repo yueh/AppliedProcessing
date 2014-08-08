@@ -33,6 +33,14 @@ trait FrontTexture extends BaseBlock {
   def getFrontIcon(side: Int) = iconFront
 
   @SideOnly(Side.CLIENT)
+  override def getIcon(side: Int, metadata: Int) = {
+    side match {
+      case 2 => getFrontIcon(side)
+      case _ => super.getIcon(side, metadata)
+    }
+  }
+
+  @SideOnly(Side.CLIENT)
   abstract override def registerBlockIcons(register: IIconRegister) = {
     super.registerBlockIcons(register)
     iconFront = register registerIcon String.format("%sFront", getUnwrappedUnlocalizedName(getUnlocalizedName))

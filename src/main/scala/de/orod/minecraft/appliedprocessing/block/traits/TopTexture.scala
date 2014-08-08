@@ -31,6 +31,14 @@ trait TopTexture extends BaseBlock {
   def getTopIcon(side: Int) = iconTop
 
   @SideOnly(Side.CLIENT)
+  override def getIcon(side: Int, metadata: Int) = {
+    side match {
+      case 0 | 1 => getTopIcon(side)
+      case _ => super.getIcon(side, metadata)
+    }
+  }
+
+  @SideOnly(Side.CLIENT)
   abstract override def registerBlockIcons(register: IIconRegister) = {
     super.registerBlockIcons(register)
     iconTop = register registerIcon String.format("%sTop", getUnwrappedUnlocalizedName(getUnlocalizedName))
