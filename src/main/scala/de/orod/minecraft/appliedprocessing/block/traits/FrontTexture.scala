@@ -30,7 +30,7 @@ trait FrontTexture extends BaseBlock {
   var iconFront: IIcon = null
 
   @SideOnly(Side.CLIENT)
-  def getTopIcon(side: Int) = iconFront
+  def getFrontIcon(side: Int) = iconFront
 
   @SideOnly(Side.CLIENT)
   abstract override def registerBlockIcons(register: IIconRegister) = {

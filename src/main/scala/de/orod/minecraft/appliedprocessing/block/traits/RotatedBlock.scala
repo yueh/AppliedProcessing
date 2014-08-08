@@ -34,9 +34,9 @@ trait RotatedBlock extends BaseBlock with TopTexture with SideTexture {
 
   override val getRenderType = 31
 
-  override def onBlockPlaced(world: World, p_149660_2_ : Int, p_149660_3_ : Int, p_149660_4_ : Int, p_149660_5_ : Int, p_149660_6_ : Float, p_149660_7_ : Float, p_149660_8_ : Float, p_149660_9_ : Int) = {
-    val j1 = p_149660_9_ & 3;
-    val b0 = p_149660_5_ match {
+  override def onBlockPlaced(world: World, X: Int, Y: Int, Z: Int, side: Int, hitX: Float, hitY: Float, hitZ: Float, metadata: Int) = {
+    val j1 = metadata & 3;
+    val b0 = side match {
       case 0 | 1 => 0
       case 2 | 3 => 8
       case 4 | 5 => 4
@@ -57,9 +57,7 @@ trait RotatedBlock extends BaseBlock with TopTexture with SideTexture {
     }
   }
 
-  override def damageDropped(p_149692_1_ : Int) = p_149692_1_ & 3
+  override def damageDropped(data: Int) = data & 3
 
-  def func_150162_k(p_150162_1_ : Int) = p_150162_1_ & 3
-
-  override def createStackedBlock(p_149644_1_ : Int) = new ItemStack(Item.getItemFromBlock(this), 1, this.func_150162_k(p_149644_1_))
+  override def createStackedBlock(data: Int) = new ItemStack(Item.getItemFromBlock(this), 1, data & 3)
 }

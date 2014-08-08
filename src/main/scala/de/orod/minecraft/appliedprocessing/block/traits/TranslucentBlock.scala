@@ -26,7 +26,7 @@ import net.minecraft.world.IBlockAccess
 import cpw.mods.fml.relauncher.{ SideOnly, Side }
 
 trait TranslucentBlock extends BaseBlock {
-  val field_150121_P = true
+  val translucent = true
 
   /**
    * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two
@@ -39,8 +39,8 @@ trait TranslucentBlock extends BaseBlock {
    * coordinates.  Args: blockAccess, x, y, z, side
    */
   @SideOnly(Side.CLIENT)
-  override def shouldSideBeRendered(p_149646_1_ : IBlockAccess, p_149646_2_ : Int, p_149646_3_ : Int, p_149646_4_ : Int, p_149646_5_ : Int) = {
-    val block = p_149646_1_.getBlock(p_149646_2_, p_149646_3_, p_149646_4_);
-    if (!this.field_150121_P && block == this) false else super.shouldSideBeRendered(p_149646_1_, p_149646_2_, p_149646_3_, p_149646_4_, p_149646_5_);
+  override def shouldSideBeRendered(blockAccess: IBlockAccess, x: Int, y: Int, z: Int, side: Int) = {
+    val block = blockAccess.getBlock(x, y, z);
+    if (!translucent && block == this) false else super.shouldSideBeRendered(blockAccess, x, y, z, side);
   }
 }
