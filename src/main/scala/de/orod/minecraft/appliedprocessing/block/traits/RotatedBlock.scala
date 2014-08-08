@@ -44,13 +44,13 @@ trait RotatedBlock extends BaseBlock with TopTexture with SideTexture {
   }
 
   @SideOnly(Side.CLIENT)
-  override def getIcon(p_149691_1_ : Int, p_149691_2_ : Int) = {
-    val k = p_149691_2_ & 12;
-    val l = p_149691_2_ & 3;
+  override def getIcon(side: Int, meta: Int) = {
+    val k = meta & 12;
+    val l = meta & 3;
     k match {
-      case 0 if p_149691_1_ == (0 | 1) => getTopIcon(l)
-      case 4 if p_149691_1_ == (4 | 5) => getTopIcon(l)
-      case 8 if p_149691_1_ == (2 | 3) => getTopIcon(l)
+      case 0 if side == 0 || side == 1 => getTopIcon(l)
+      case 4 if side == 4 || side == 5 => getTopIcon(l)
+      case 8 if side == 2 || side == 3 => getTopIcon(l)
       case _ => getSideIcon(l)
     }
   }
