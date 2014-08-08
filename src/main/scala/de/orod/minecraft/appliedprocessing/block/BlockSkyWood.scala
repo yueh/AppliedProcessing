@@ -29,27 +29,12 @@ import cpw.mods.fml.relauncher.SideOnly
 import cpw.mods.fml.relauncher.Side
 import de.orod.minecraft.appliedprocessing.reference._
 import net.minecraft.init.Blocks
+import de.orod.minecraft.appliedprocessing.block.traits.RotatedBlock
 
-class BlockSkyWood extends BlockRotatedPillar(Material.wood) with BaseBlock {
+class BlockSkyWood extends APBaseBlock with RotatedBlock {
   this setBlockName Names.BLOCK_SKY_WOOD
-  this setBlockTextureName getUnwrappedUnlocalizedName(getUnlocalizedName)
   this setStepSound Block.soundTypeWood
   this setHardness 4
-
-  var iconSide: IIcon = null
-  var iconTop: IIcon = null
-
-  @SideOnly(Side.CLIENT)
-  override def getSideIcon(side: Int) = iconSide
-
-  @SideOnly(Side.CLIENT)
-  override def getTopIcon(side: Int) = iconTop
-
-  @SideOnly(Side.CLIENT)
-  override def registerBlockIcons(register: IIconRegister) = {
-    iconSide = register registerIcon String.format("%s", getUnwrappedUnlocalizedName(getUnlocalizedName))
-    iconTop = register registerIcon String.format("%sTop", getUnwrappedUnlocalizedName(getUnlocalizedName))
-  }
 
   override def canSustainLeaves(world: IBlockAccess, x: Int, y: Int, z: Int) = true
   override def isWood(world: IBlockAccess, x: Int, y: Int, z: Int) = true

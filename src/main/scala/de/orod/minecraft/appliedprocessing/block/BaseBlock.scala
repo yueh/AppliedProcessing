@@ -23,9 +23,10 @@ import cpw.mods.fml.relauncher.Side
 import cpw.mods.fml.relauncher.SideOnly
 import net.minecraft.block.Block
 import net.minecraft.block.material.Material
-import net.minecraft.client.renderer.texture.IIconRegister
 import de.orod.minecraft.appliedprocessing.reference._
 import de.orod.minecraft.appliedprocessing.creativetab.CreativeTab
+import net.minecraft.client.renderer.texture.IIconRegister
+import net.minecraft.block.BlockLeavesBase
 
 trait BaseBlock extends Block {
   this setCreativeTab CreativeTab.AP_TAB
@@ -35,4 +36,14 @@ trait BaseBlock extends Block {
 
   override def getUnlocalizedName() =
     String format ("tile.%s%s", Reference.MOD_ID.toLowerCase + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName))
+
+}
+
+class APBaseBlock(val material: Material = Material.rock) extends Block(material) with BaseBlock {
+  this setBlockTextureName getUnwrappedUnlocalizedName(getUnlocalizedName)
+
+  @SideOnly(Side.CLIENT)
+  override def registerBlockIcons(register: IIconRegister) = {
+    blockIcon = register registerIcon String.format("%s", getUnwrappedUnlocalizedName(getUnlocalizedName))
+  }
 }

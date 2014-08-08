@@ -15,19 +15,25 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package de.orod.minecraft.appliedprocessing.recipes
+package de.orod.minecraft
+package appliedprocessing
+package block
+package traits
 
-import net.minecraft.item.ItemStack
-import net.minecraft.init.Blocks
-import net.minecraft.block.Block
-import cpw.mods.fml.common.registry.GameRegistry
+import net.minecraft.util.IIcon
+import net.minecraft.client.renderer.texture.IIconRegister
+import cpw.mods.fml.relauncher.SideOnly
+import cpw.mods.fml.relauncher.Side
 
-import de.orod.minecraft.appliedprocessing.reference.Names
-import de.orod.minecraft.appliedprocessing.reference.Reference
+trait TopTexture extends BaseBlock {
+  var iconTop: IIcon = null
 
-class RecipeSkyWoodPlank {
-  val inputItem = Block.blockRegistry.getObject(Reference.MOD_ID + ":" + "skywood").asInstanceOf[Block]
-  val outputItem = Block.blockRegistry.getObject(Reference.MOD_ID + ":" + "skyplank").asInstanceOf[Block]
+  @SideOnly(Side.CLIENT)
+  def getTopIcon(side: Int) = iconTop
 
-  GameRegistry.addRecipe(new ItemStack(outputItem, 4), "x", "x", inputItem)
+  @SideOnly(Side.CLIENT)
+  abstract override def registerBlockIcons(register: IIconRegister) = {
+    super.registerBlockIcons(register)
+    iconTop = register registerIcon String.format("%sTop", getUnwrappedUnlocalizedName(getUnlocalizedName))
+  }
 }

@@ -24,9 +24,8 @@ import net.minecraft.block.material.Material
 
 import de.orod.minecraft.appliedprocessing.reference._
 
-class BlockSkyPlank extends Block(Material.wood) with BaseBlock {
+class BlockSkyPlank extends APBaseBlock {
   this setBlockName Names.BLOCK_SKY_PLANK
-  this setBlockTextureName getUnwrappedUnlocalizedName(getUnlocalizedName)
   this setStepSound Block.soundTypeWood
   this setHardness 2
 }

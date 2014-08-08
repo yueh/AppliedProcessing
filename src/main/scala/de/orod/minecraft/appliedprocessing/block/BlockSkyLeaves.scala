@@ -28,11 +28,10 @@ import net.minecraft.world.gen.feature.WorldGenTrees
 import net.minecraft.block.Block
 import cpw.mods.fml.relauncher.SideOnly
 import cpw.mods.fml.relauncher.Side
-
 import de.orod.minecraft.appliedprocessing.reference._
+import de.orod.minecraft.appliedprocessing.block.traits.TranslucentBlock
 
-class BlockSkyLeaves extends BlockLeavesBase(Material.leaves, true) with BaseBlock {
+class BlockSkyLeaves extends APBaseBlock with TranslucentBlock {
   this setBlockName Names.BLOCK_SKY_LEAVES
-  this setBlockTextureName getUnwrappedUnlocalizedName(getUnlocalizedName)
   this setHardness 1
 }
