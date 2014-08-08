@@ -22,7 +22,7 @@ package utility
 import org.apache.logging.log4j.Level
 import cpw.mods.fml.common.FMLLog
 
-import de.orod.minecraft.appliedprocessing.reference._
+import reference._
 
 object LogHelper {
   def log(logLevel: Level, o: Object) = FMLLog log (Reference.MOD_NAME, logLevel, String valueOf o)

@@ -19,14 +19,13 @@ package de.orod.minecraft
 package appliedprocessing
 package block
 
-import cpw.mods.fml.relauncher.Side
-import cpw.mods.fml.relauncher.SideOnly
+import creativetab.CreativeTab
 import net.minecraft.block.Block
 import net.minecraft.block.material.Material
-import de.orod.minecraft.appliedprocessing.reference._
-import de.orod.minecraft.appliedprocessing.creativetab.CreativeTab
 import net.minecraft.client.renderer.texture.IIconRegister
-import net.minecraft.block.BlockLeavesBase
+import cpw.mods.fml.relauncher.{ SideOnly, Side }
+
+import reference._
 
 trait BaseBlock extends Block {
   this setCreativeTab CreativeTab.AP_TAB

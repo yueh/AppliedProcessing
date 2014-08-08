@@ -20,9 +20,8 @@ package appliedprocessing
 package block
 
 import net.minecraft.block.Block
-import net.minecraft.block.material.Material
 
-import de.orod.minecraft.appliedprocessing.reference._
+import reference._
 
 class BlockSkyPlank extends APBaseBlock {
   this setBlockName Names.BLOCK_SKY_PLANK

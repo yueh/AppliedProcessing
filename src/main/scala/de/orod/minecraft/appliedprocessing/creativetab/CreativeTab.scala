@@ -22,9 +22,9 @@ package creativetab
 import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.item.Item
 
-import de.orod.minecraft.appliedprocessing.init.ModItems
-import de.orod.minecraft.appliedprocessing.init.ModBlocks
-import de.orod.minecraft.appliedprocessing.reference._
+import init.ModItems
+import init.ModBlocks
+import reference._
 
 object CreativeTab {
   val AP_TAB = new CreativeTabs(Reference.MOD_ID.toLowerCase()) {

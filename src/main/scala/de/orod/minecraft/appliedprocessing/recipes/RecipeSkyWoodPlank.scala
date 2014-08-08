@@ -15,15 +15,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package de.orod.minecraft.appliedprocessing.recipes
+package de.orod.minecraft
+package appliedprocessing
+package recipes
 
 import net.minecraft.item.ItemStack
 import net.minecraft.init.Blocks
 import net.minecraft.block.Block
 import cpw.mods.fml.common.registry.GameRegistry
 
-import de.orod.minecraft.appliedprocessing.reference.Names
-import de.orod.minecraft.appliedprocessing.reference.Reference
+import reference._
 
 class RecipeSkyWoodPlank {
   val inputItem = Block.blockRegistry.getObject(Reference.MOD_ID + ":" + "skywood").asInstanceOf[Block]

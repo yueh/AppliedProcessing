@@ -20,10 +20,11 @@ package appliedprocessing
 package block
 package traits
 
-import net.minecraft.util.IIcon
 import net.minecraft.client.renderer.texture.IIconRegister
-import cpw.mods.fml.relauncher.SideOnly
-import cpw.mods.fml.relauncher.Side
+import net.minecraft.util.IIcon
+import cpw.mods.fml.relauncher.{ SideOnly, Side }
+
+import block.BaseBlock
 
 trait FrontTexture extends BaseBlock {
   var iconFront: IIcon = null

@@ -21,7 +21,7 @@ package item
 
 import net.minecraft.item.Item
 
-import de.orod.minecraft.appliedprocessing.reference._
+import reference._
 
 class ItemMaterialSkywoodDust extends Item with BaseItem {
   this setUnlocalizedName Names.ITEM_SKY_WOODDUST

@@ -19,17 +19,8 @@ package de.orod.minecraft
 package appliedprocessing
 package block
 
-import net.minecraft.block.material.Material
-import net.minecraft.util.IIcon
-import net.minecraft.client.renderer.texture.IIconRegister
-import net.minecraft.client.Minecraft
-import net.minecraft.block.BlockLeavesBase
-import net.minecraft.world.gen.feature.WorldGenTrees
-import net.minecraft.block.Block
-import cpw.mods.fml.relauncher.SideOnly
-import cpw.mods.fml.relauncher.Side
-import de.orod.minecraft.appliedprocessing.reference._
-import de.orod.minecraft.appliedprocessing.block.traits.TranslucentBlock
+import traits.TranslucentBlock
+import reference._
 
 class BlockSkyLeaves extends APBaseBlock with TranslucentBlock {
   this setBlockName Names.BLOCK_SKY_LEAVES

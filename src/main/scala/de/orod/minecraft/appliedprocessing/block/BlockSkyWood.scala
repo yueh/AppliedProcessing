@@ -20,16 +20,10 @@ package appliedprocessing
 package block
 
 import net.minecraft.block.Block
-import net.minecraft.block.BlockRotatedPillar
-import net.minecraft.block.material.Material
-import net.minecraft.client.renderer.texture.IIconRegister
-import net.minecraft.util.IIcon
 import net.minecraft.world.IBlockAccess
-import cpw.mods.fml.relauncher.SideOnly
-import cpw.mods.fml.relauncher.Side
-import de.orod.minecraft.appliedprocessing.reference._
-import net.minecraft.init.Blocks
-import de.orod.minecraft.appliedprocessing.block.traits.RotatedBlock
+
+import traits.RotatedBlock
+import reference._
 
 class BlockSkyWood extends APBaseBlock with RotatedBlock {
   this setBlockName Names.BLOCK_SKY_WOOD

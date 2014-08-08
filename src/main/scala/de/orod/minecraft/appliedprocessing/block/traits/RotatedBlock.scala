@@ -21,12 +21,14 @@ package block
 package traits
 
 import net.minecraft.world.World
-import net.minecraft.item.ItemStack
-import net.minecraft.item.Item
+import net.minecraft.item.{ Item, ItemStack }
 import net.minecraft.util.IIcon
 import net.minecraft.client.renderer.texture.IIconRegister
-import cpw.mods.fml.relauncher.SideOnly
-import cpw.mods.fml.relauncher.Side
+import cpw.mods.fml.relauncher.{ SideOnly, Side }
+
+import cpw.mods.fml.relauncher.{ SideOnly, Side }
+
+import block.BaseBlock
 
 trait RotatedBlock extends BaseBlock with TopTexture with SideTexture {
 

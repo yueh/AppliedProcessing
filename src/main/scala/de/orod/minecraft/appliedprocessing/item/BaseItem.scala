@@ -19,14 +19,12 @@ package de.orod.minecraft
 package appliedprocessing
 package item
 
-import cpw.mods.fml.relauncher.Side
-import cpw.mods.fml.relauncher.SideOnly
 import net.minecraft.client.renderer.texture.IIconRegister
-import net.minecraft.item.Item
-import net.minecraft.item.ItemStack
+import net.minecraft.item.{ Item, ItemStack }
+import cpw.mods.fml.relauncher.{ SideOnly, Side }
 
-import de.orod.minecraft.appliedprocessing.creativetab.CreativeTab
-import de.orod.minecraft.appliedprocessing.reference._
+import creativetab.CreativeTab
+import reference._
 
 trait BaseItem extends Item {
   setCreativeTab(CreativeTab.AP_TAB)

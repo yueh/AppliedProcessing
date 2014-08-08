@@ -21,8 +21,8 @@ package init
 
 import cpw.mods.fml.common.registry.GameRegistry
 
-import de.orod.minecraft.appliedprocessing.item._
-import de.orod.minecraft.appliedprocessing.reference._
+import item._
+import reference._
 
 @GameRegistry.ObjectHolder(Reference.MOD_ID)
 object ModItems {

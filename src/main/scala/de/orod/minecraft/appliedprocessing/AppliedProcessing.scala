@@ -24,10 +24,10 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent
 import cpw.mods.fml.common.event.FMLPreInitializationEvent
 import cpw.mods.fml.common.SidedProxy
 
-import de.orod.minecraft.appliedprocessing.reference._
-import de.orod.minecraft.appliedprocessing.utility._
-import de.orod.minecraft.appliedprocessing.proxy._
-import de.orod.minecraft.appliedprocessing.init._
+import reference._
+import utility._
+import proxy._
+import init._
 
 @Mod(
   modid = Reference.MOD_ID,
