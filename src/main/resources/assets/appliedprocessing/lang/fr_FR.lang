@@ -1,0 +1,5 @@
+item.appliedprocessing:SkyWoodDust.name=Poussière de bois de ciel 
+tile.appliedprocessing:BlockSkyWood.name=Bois de ciel 
+tile.appliedprocessing:BlockSkyWoodPlanks.name=Planches de bois de ciel 
+tile.appliedprocessing:BlockSkyLeaves.name=Feuilles de ciel 
+itemGroup.appliedprocessing=Applied Processing 
